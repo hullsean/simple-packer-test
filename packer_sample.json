@@ -1,0 +1,16 @@
+{
+  "builders": [{
+    "type": "amazon-ebs",
+    "source_ami_filter": {
+      "filters": {
+      "virtualization-type": "hvm",
+      "name": "amzn-ami-hvm-2017.09.1.20180307-x86_64-gp2",
+      "root-device-type": "ebs"
+      }
+    },
+    "instance_type": "t2.micro",
+    "ssh_username": "ec2-user",
+    "ami_name": "sean-test-ami {{timestamp}}",
+    "subnet_id": "subnet-1f866434"
+  }]
+}
